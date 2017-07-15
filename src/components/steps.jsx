@@ -1,5 +1,3 @@
-
-
 import React from "react";
 import { render } from "react-dom";
 import Steps from "react-steps";
@@ -44,11 +42,10 @@ const Example = ({ children }) => (
 const Step = ({ data }) => (
   <div>
     <Example>
-      <Steps items={data} type={"circle"}  />
+      <Steps items={data} type={"circle"} />
     </Example>
   </div>
 );
-
 
 
 export default Step;

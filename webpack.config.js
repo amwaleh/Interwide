@@ -1,4 +1,4 @@
-require('dotenv').config();;;;;
+require("dotenv").config();
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const WebpackCleanupPlugin = require("webpack-cleanup-plugin");
 const BabiliPlugin = require("babili-webpack-plugin");
@@ -13,40 +13,42 @@ const ENV = process.env.NODE_ENV;
 const PORT = process.env.PORT;
 const API_HOST = process.env.API_HOST;
 const ENV_VARS = process.env;
-const defines = Object.keys(ENV_VARS)
-  .reduce((env, key) => {
+const defines = Object.keys(ENV_VARS).reduce(
+  (env, key) => {
+    const envVars = {};
     const val = JSON.stringify(ENV_VARS[key]);
-    env[key.toUpperCase()] = val;
-    return env;
-  }, {
+    envVars[key.toUpperCase()] = val;
+    return envVars;
+  },
+  {
     NODE_ENV: JSON.stringify(ENV),
   });
 const isProd = ENV === "production";
 const cssDev = ["style-loader", "css-loader", "postcss-loader"];
-const cssProd = ExtractTextPlugin.extract(
-  {
-    fallback: "style-loader",
-    use: ["css-loader", "postcss-loader"],
-  });
+const cssProd = ExtractTextPlugin.extract({
+  fallback: "style-loader",
+  use: ["css-loader", "postcss-loader"],
+});
 const cssConfig = isProd ? cssProd : cssDev;
-
 
 const entry = ((env) => {
   switch (env) {
-    case "test": return path.join(__dirname, "./tests/index.js");
-    default: return "./src/App.js";
+    case "test":
+      return path.join(__dirname, "./tests/index.js");
+    default:
+      return "./src/App.js";
   }
 })(ENV);
-
 
 const output = ((env) => {
   switch (env) {
     // case "production": return "[chunkhash].js";
-    case "test": return "tests.js";
-    default: return "bundle.js";
+    case "test":
+      return "tests.js";
+    default:
+      return "bundle.js";
   }
 })(ENV);
-
 
 const plugins = (() => {
   const always = [
@@ -67,28 +69,21 @@ const plugins = (() => {
   ];
 
   if (isProd) {
-    return [
-      ...always,
-        new WebpackCleanupPlugin(),
-      new UglifyJSPlugin(),
-
-    ];
+    return [...always, new WebpackCleanupPlugin(), new UglifyJSPlugin()];
   }
   return [
     ...always,
     new webpack.HotModuleReplacementPlugin(),
     new webpack.optimize.UglifyJsPlugin({
-        compress: {
-          warnings: false,
-          screw_ie8: true,
-          drop_console: true,
-          drop_debugger: true,
-        },
-      }),
-
+      compress: {
+        warnings: false,
+        screw_ie8: true,
+        drop_console: true,
+        drop_debugger: true,
+      },
+    }),
   ];
 })();
-
 
 module.exports = {
   entry,
@@ -131,5 +126,4 @@ module.exports = {
     stats: "minimal",
     historyApiFallback: true,
   },
-}
-  ;
+};

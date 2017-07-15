@@ -2,26 +2,24 @@ import React from "react";
 import { lifecycle, compose } from "recompose";
 import "./style.css";
 
-const Video = ({path})=> (
-
-  <div >
+const Video = ({ path }) => (
+  <div>
     <div className="video-container">
       <div className="filter" />
-      <video autoPlay loop  >
+      <video autoPlay loop>
         <source src={path} type="video/webm" />
-            Your browser does not support the video tag. I suggest you upgrade your browser.
-        </video>
+        Your browser does not support the video tag. I suggest you upgrade your browser.
+      </video>
     </div>
   </div>
 );
 
 const enhance = compose(
-    lifecycle({
-      componentWillMount() {
-        require("./coverr");
-      },
-    }),
+  lifecycle({
+    componentWillMount() {
+      require("./coverr");
+    },
+  }),
 );
 
-export default enhance(Video)
-;
+export default enhance(Video);
