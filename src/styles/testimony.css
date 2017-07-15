@@ -1,0 +1,57 @@
+h2 {
+  margin-top: 40px;
+  font-weight: 600;
+  color:#7d348c;
+  text-align: center;
+}
+
+.centered-text {
+  text-align: center;
+}
+
+.quote {
+  background: #c7f0f6;
+  padding: 15px 20px 5px 15px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  color: #5d5b5b;
+}
+.quote:after {
+  content: '';
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 20px 18px 0 18px;
+  border-color: #c7f0f6 transparent transparent transparent;
+  position: relative;
+  top: 37px;
+  left: 20px;
+}
+
+.student {
+  margin-left: 25px;
+  margin-bottom: 80px;
+}
+.student .photo>img{
+  background-color: #ccc;
+  border-radius: 100px;
+  width: 80px;
+  height: 60px;
+  float: left;
+  margin-right: 10px;
+}
+.student p {
+  position: relative;
+  top: 5px;
+  text-transform: uppercase;
+  color:#7d348c;
+}
+.student p:nth-child(2) {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+.student p:nth-child(3) {
+  font-size: 14px;
+  color: #777;
+}

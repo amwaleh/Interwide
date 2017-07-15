@@ -1,0 +1,96 @@
+.header {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    z-index: 999;
+    left: 15%;
+    top: 20%;
+    color:#7d348c;
+    text-align: center;
+}
+
+.banner {
+    /* Rectangle 2: */
+    left: 0;
+    display: flex;
+    padding: 50px;
+    background: #017A95;
+    background-size: cover;
+    color: #FFFFFF;
+    font-size: 18px;
+    justify-content: center;
+    align-items: center;
+    & p {}
+    & .content {
+        max-width: 45rem;      
+        
+    }
+    & img {
+        width: 5rem;
+        margin: 20px;
+        filter: invert(100%);
+    }
+}
+
+.steps {
+    max-width: 900px;
+    columns: 2;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 50px 30px;
+    &>.rc-steps-item {
+        background-color: blue;
+    }
+}
+
+h3 {
+    font-size: 2rem;
+    font-weight: 600;
+    flex: 1;
+    text-align: center;
+}
+
+.mission {
+    
+    & img {
+        width: 100%;
+        max-height: 600px;
+        
+        
+   &:hover {
+        filter: hue-rotate(72deg);
+        transition: transform 2s ease,
+                    filter 2s ease;
+   }
+    }
+
+
+& ul {
+    background-color: rgba(255, 255, 255, .8);
+    flex:1;
+    max-width: 800px;
+    font-size: 1.2rem;
+    font-weight: 300px;
+    margin: 0 auto;
+    padding: 10px;
+    list-style: none;
+    
+    
+}
+
+
+}
+
+.servicesSection {
+background-color: rgba(2, 161, 181, 0.00);
+padding: 60px 0 60px 60px;
+}
+
+.testimonies {
+    padding-top:50px;
+max-width:950px;
+margin: 0 auto;
+
+}
