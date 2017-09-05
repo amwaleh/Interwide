@@ -1,0 +1,27 @@
+[
+  {
+    "image": "moving-2.jpg",
+    "heading": "Same Day Delivery",
+    "details": "Every day, we deliver items on behalf of thousands of retailers, businesses and individuals within Kenya. Same Day deliveries ranges from small envelopes to large pallets of packages. Our team of couriers are well trained and can handle your packages…large or small."
+  },
+  {
+    "image": "Cargo.jpg",
+    "heading": "International Courier Services",
+    "details": "We offer an end to end cross border delivery service which includes picking, dispatching, clearing and forwarding, and delivery."
+  },
+  {
+    "image": "bulkWarehouse.jpg",
+    "heading": "Storage and Warehousing services",
+    "details": "Storage and warehousing service is offered as a single service or as a package with transportation"
+  },
+  {
+    "image": "hauling.jpg",
+    "heading": "Hauling and Bulk Material handling",
+    "details": "We offer hauling services for bulky materials"
+  },
+  {
+    "image": "bike.jpg",
+    "heading": "Messenger services ",
+    "details": "We offer outsourced Messengerial services we provide  personnel to undertake menial jobs of filing and postage."
+  }
+]

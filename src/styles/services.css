@@ -59,6 +59,7 @@
         margin: 0 auto;
         min-height: 400px;
     }
+
 }
 
 .baby {
@@ -132,4 +133,12 @@
     100% {
         transform: scale(1);
     }
+}
+
+a.downloadLink {
+    color: #9d02b7;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(162, 161, 173, 0.14);
 }

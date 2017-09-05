@@ -1,10 +1,10 @@
 import React from "react";
 import Styles from "Styles/Services.css";
-import Step2 from "./step2";
-import { Person } from "./testimony";
-import { Parallax } from "react-parallax";
-import { Message, Icon, Divider } from "semantic-ui-react";
-import { ContentLinks } from "Components/services";
+import {Parallax} from "react-parallax";
+import {Message, Icon, Divider} from "semantic-ui-react";
+import {ContentLinks,Intro} from "Components/services";
+import content from "./about.json";
+import DownloadLink from 'react-download-link'
 
 const MessageExampleIcon = ({ contents }) => (
   <div>
@@ -12,7 +12,6 @@ const MessageExampleIcon = ({ contents }) => (
       <div key={id}>
         <a name={`${content.heading}`} />
         <Message icon className={!(id % 2) ? Styles.message : Styles.backgro}>
-
           <img src={require(`Assets/${content.image}`)} />
           <Message.Content>
             <Message.Header><h3> {content.heading} </h3></Message.Header>
@@ -26,21 +25,16 @@ const MessageExampleIcon = ({ contents }) => (
   </div>
 );
 
-const Intro = () => (
-  <div className={Styles.intro}>
-    <h3>Need a parcel or cargo delivered?</h3>
-    <ContentLinks />
-    <p> Contact us:</p>
-    <Icon name="phone" />
-    tel: +254 720 144 747
-    <br />
-    <Icon name="mail outline" />
-    email: info@interwidecs.com
-    <br />
-    <Icon name="coffee" />
-    Location: Nanak House, Nairobi, Kenya
-  </div>
-);
+
+const Displaycontent = ({heading, content}) => (
+    <div>
+        <Divider horizontal><h3>{heading}</h3></Divider>
+        <p>
+            {content}
+        </p>
+    </div>
+)
+
 
 const About = () => (
   <div className={Styles.about}>
@@ -53,24 +47,12 @@ const About = () => (
     </div>
     <Intro />
     <div className={Styles.mystepform} style={{ width: "70vw" }}>
-      <Divider horizontal><h3>Who we are</h3></Divider>
-      <p>
-        Interwide Courier Services provides professional transport and logistics services for a wide clientele
-        with a global reach.
-        We provide end to end professional services from collection, clearing and delivery.
-        Headquartered at Nanak House, Fourth Floor we are able to centrally serve our clients and perform
-        administrative functions.
-      </p>
-      <Divider horizontal><h3>Mission</h3></Divider>
+        {content.map((item) => <Displaycontent key={item.heading} {...item}/>)}
+        <a href={require("Assets/ICS_Company_Profile.pdf")} download className={Styles.downloadLink}> <Icon name="download" /> download company profile (pdf)</a>
 
-      <p>
-        Interwide Courier Services is committed to provide timely and reliable courier services through
-        consistency.
-      </p>
+  </div>
 
-      <Divider horizontal><h3>Vision</h3></Divider>
-      <p>Interwide’s vision is to be a world class courier service provider.</p>
-    </div>
+
   </div>
 );
 

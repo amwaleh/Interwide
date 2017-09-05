@@ -1,7 +1,6 @@
 require("dotenv").config();
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const WebpackCleanupPlugin = require("webpack-cleanup-plugin");
-const BabiliPlugin = require("babili-webpack-plugin");
 const UglifyJSPlugin = require("uglifyjs-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const webpack = require("webpack");

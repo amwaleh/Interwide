@@ -49,7 +49,7 @@ module.exports = [
   // Fonts
 
   {
-    test: /\.(eot|woff|woff2|ttf|svg)(\?\S*)?$/,
+    test: /\.(eot|woff|woff2|ttf|svg|pdf)(\?\S*)?$/,
     exclude: /(src\/assets\/images)/,
     loader: "url-loader",
     options: {

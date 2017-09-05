@@ -15,23 +15,28 @@ const Contacts = () => (
     <div className={Styles.intro} style={{ height: "100vh", top: "70px" }}>
 
       <h3>Need a parcel or cargo delivered?</h3>
-
+      <img
+          src={require("Assets/sec.jpg")}
+          style={{ maxWidth: "400px", display: "block" }}
+      />
       <p> Contact us:</p>
       <Icon name="phone" />
-      tel: +254 720 144 747
+        tel: +254 720 144 747
+      <br /> <Icon name="phone" />
+        tel: +254 739 053 434
       <br />
       <Icon name="mail outline" />
       email: info@interwidecs.com
+
+
+      <h4> Visit us at </h4>
+      <Icon name="building" />
+       Nanak House, Nairobi, Kenya
+
       <br />
-      <Icon name="coffee" />
-      Location: Nanak House, Nairobi, Kenya
-      <img
-        src={require("Assets/sec.jpg")}
-        style={{ maxWidth: "400px", display: "block" }}
-      />
-      <br />
-      <Icon name="facebook square" size="big" />
-      <Icon name="twitter" size="big" />
+        <a href="https://www.facebook.com/interwidecs/" target="_blank"><Icon name="facebook square" size="big" /></a>
+        <a href="https://twitter.com/ics_interwide" target="_blank"> <Icon name="twitter" size="big" /></a>
+        <a href="https://www.linkedin.com/company-beta/18157055/admin/overview/" target="_blank"> <Icon name="linkedin" size="big" /></a>
 
     </div>
 

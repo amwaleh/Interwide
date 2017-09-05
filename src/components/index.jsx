@@ -1,7 +1,6 @@
 import React from "react";
 import Video from "./video";
 import { Card, Icon, Image } from "semantic-ui-react";
-import Step2 from "./step2";
 import ServiceBar from "./servicebar";
 import Testimony from "./testimony";
 import Styles from "../styles/container.css";
@@ -11,14 +10,22 @@ const TESTIMONY = require("./testimonials.json");
 
 const extra = (
   <a>
-    <Icon name="phone" />
-    tel: +254 720 144 747
-    <br />
-    <Icon name="mail outline" />
-    email: info@interwidecs.com
+      <div>
+      <a href="https://www.facebook.com/interwidecs/" target="_blank"><Icon name="facebook square" size="big" /></a>
+      <a href="https://twitter.com/ics_interwide" target="_blank"> <Icon name="twitter" size="big" /></a>
+      <a href="https://www.linkedin.com/company-beta/18157055/admin/overview/" target="_blank"> <Icon name="linkedin" size="big" /></a>
+      </div>
+      <Icon name="phone" />
+      tel: +254 720 144 747
+      <br /> <Icon name="phone" />
+      tel: +254 739 053 434
+      <br />
+      <Icon name="mail outline" />
+      email: info@interwidecs.com
     <br />
     <Icon name="coffee" />
-    Location: Nanak House, Nairobi, Kenya
+    Location:  Kimathi Street| Nanak house | 4th Floor | Suite 412
+
   </a>
 );
 
@@ -26,7 +33,7 @@ const ContainerBody = () => (
   <div>
     <Video path={require("../assets/Puzzling.webm")} />
     <div className={Styles.header}>
-      <h1> Welcome to Interwide courier services <br /> </h1>
+      <h1> Welcome to Interwide courier services </h1>
       <Card
         image={require("../assets/sec.jpg")}
         header="Interwide Courier Services"

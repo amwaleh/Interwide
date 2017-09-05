@@ -9,6 +9,13 @@
     top: 20%;
     color:#7d348c;
     text-align: center;
+    & h1 {
+          margin: 10px;
+          color: #fff;
+          font-size: 3rem;
+          max-width: 40rem;
+          text-shadow: 2px 0px 5px #000;
+      }
 }
 
 .banner {
